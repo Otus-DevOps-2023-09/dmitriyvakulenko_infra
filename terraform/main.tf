@@ -11,7 +11,7 @@ resource "yandex_compute_instance" "app" {
 
   boot_disk {
     initialize_params {
-      image_id = "fd8amk7ch9bprn3mq4ge"
+      image_id = var.app_disk_image
     }
   }
 
