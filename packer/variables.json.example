@@ -1,5 +1,5 @@
 {
-	"key": "key.json",
-	"folder_id": "abcde",
-	"image": "ubuntu-1604-lts"
+    "user_service_account_key_file": "./fake_key.json",
+    "user_folder_id": "11111111111111111120",
+    "user_source_image_family": "ubuntu-1604-lts"
 }
