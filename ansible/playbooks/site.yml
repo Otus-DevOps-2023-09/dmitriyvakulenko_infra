@@ -1,5 +1,18 @@
----
-- import_playbook: db.yml
-- import_playbook: app.yml
-- import_playbook: deploy.yml
-- import_playbook: users.yml
+- name: Configure App Host
+  hosts: default
+  become: true
+  tasks:
+    - name: Update and upgrade apt packages
+      apt:
+        upgrade: yes
+        update_cache: yes
+
+    - name: Install packages
+      apt:
+        name:
+          - git
+          - ruby-full
+          - ruby-bundler
+          - build-essential
+        state: present
+        update_cache: yes
